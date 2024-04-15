@@ -3,6 +3,8 @@ let Computerscore = 0;
 
 const pictures = document.querySelectorAll(".picture");
 const Move = document.querySelector("#Move");
+const userscorepara = document.querySelector("#user-Score");
+const Computerscorpara = document.querySelector("#Computer-Score");
 
 const ganComputerGame = () => {
   let option = ["paper", "scissor", "rock"];
@@ -12,22 +14,22 @@ const ganComputerGame = () => {
 };
 
 const drawGame = () => {
-  console.log("Drawgame!");
-  Move.innerText = "draw game!"
-  Move.style.background= "gray"
-
+  Move.innerText = "draw game!";
+  Move.style.background = "gray";
 };
 
 const showwin = (youwin) => {
   if (youwin) {
-    console.log("You are Winner!");
-    Move.innerText = "Well Played You Win!";
-    Move.style.background= "green"
+    userscore++;
+    userscorepara.innerText = userscore;
 
+    Move.innerText = "Well Played You Win!";
+    Move.style.background = "green";
   } else {
-    console.log("You are Lose");
+    Computerscore++;
+    Computerscorpara.innerText = Computerscore;
     Move.innerText = "You lose.";
-    Move.style.background= "red"
+    Move.style.background = "red";
   }
 };
 
